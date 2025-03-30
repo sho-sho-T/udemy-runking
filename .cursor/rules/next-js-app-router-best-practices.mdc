@@ -1,0 +1,18 @@
+---
+description: 
+globs: app/**/*
+alwaysApply: false
+---
+---
+description: このルールは 'app' ディレクトリにおけるNext.js App Routerのベストプラクティスを規定します。
+globs: app/**/*
+alwaysApply: false
+---
+
+- デフォルトではサーバーコンポーネントを使用する
+- 必要な場合のみクライアントコンポーネントを実装する
+- 新しいファイルベースのルーティングシステムを活用する
+- 共有レイアウトにはlayout.jsを使用する
+- ローディング状態にはloading.jsを実装する
+- エラーハンドリングにはerror.jsを使用する
+- APIルートにはルートハンドラーを活用する

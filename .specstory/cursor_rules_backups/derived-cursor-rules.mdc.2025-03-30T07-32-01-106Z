@@ -1,0 +1,40 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+
+## PROJECT OVERVIEW
+This project aims to [Insert Project Goal Here].  The project is currently under development and undergoing internationalization efforts, specifically focusing on improving Japanese language support.
+
+## CODE STYLE
+[Insert Code Style Guidelines Here]
+
+## FOLDER ORGANIZATION
+[Insert Folder Organization Guidelines Here]
+
+## TECH STACK
+[Insert Current Tech Stack Here]
+
+## PROJECT-SPECIFIC STANDARDS
+- All documentation should be written in clear and concise language.  
+- Japanese language support is being actively developed.  Files identified for translation include `README.md`, `.specstory/.what-is-this.md`, `.devcontainer/Dockerfile`, `.devcontainer/docker-compose.yml`, and `.devcontainer/devcontainer.json`.  Other files are considered configuration or system files and are excluded from translation.
+
+## WORKFLOW & RELEASE RULES
+[Insert Workflow and Release Rules Here]
+
+## REFERENCE EXAMPLES
+[Insert Reference Examples Here]
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+The project documentation will be maintained using markdown (.md) files.  A review of existing documentation, specifically `README.md` and `.specstory/.what-is-this.md`, is necessary to ensure clarity and completeness of Japanese language support.  Versioning of documentation will be tracked using Git.
+
+## DEBUGGING
+[Insert Debugging Guidelines Here]
+
+## FINAL DOs AND DON'Ts
+- DO ensure all code adheres to the defined code style.
+- DO utilize the version control system effectively.
+- DO write clear and concise documentation.
+- DON'T commit incomplete or untested code.
+- DON'T neglect to update the `.cursorrules` file with any changes to project standards or workflows.

@@ -1,0 +1,13 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: 一貫性を維持するために、React, Next.jsおよび, TypeScript コードに特定の命名規則を適用します。
+globs: **/*.{ts,tsx,js,jsx}
+---
+
+- 変数、関数、コンポーネントについては、標準のTypeScriptおよびJavaScriptの命名規則に従います。
+- コンポーネント名はPascalCaseする必要があります。
+- 変数名と関数名はキャメルケースにする必要があります。

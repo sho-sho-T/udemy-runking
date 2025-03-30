@@ -1,0 +1,62 @@
+---
+description: Cursor rules derived by SpecStory from the project AI interaction history
+globs: *
+---
+
+## PROJECT OVERVIEW
+This project aims to [Insert Project Goal Here].  The project is currently under development and undergoing internationalization efforts, specifically focusing on improving Japanese language support.  Further review of `.cursor/rules/next-js-app-router-best-practices.mdc` is needed for Japanese language support.  Files identified for translation include `README.md`, `.specstory/.what-is-this.md`, `.devcontainer/Dockerfile`, `.devcontainer/docker-compose.yml`, `.devcontainer/devcontainer.json`, and `.cursor/rules/next-js-app-router-best-practices.mdc`. Other files are considered configuration or system files and are excluded from translation.
+
+## CODE STYLE
+[Insert Code Style Guidelines Here]
+
+## FOLDER ORGANIZATION
+[Insert Folder Organization Guidelines Here]
+
+## TECH STACK
+[Insert Current Tech Stack Here]
+
+## PROJECT-SPECIFIC STANDARDS
+- All documentation should be written in clear and concise language.  
+- Japanese language support is being actively developed.
+
+- This rule enforces Next.js App Router best practices in the 'app' directory.  The rule type can now be specified in cursor rules.  To specify the rule type, add a `type` field to the frontmatter section (surrounded by `---`). Example: `type: best-practices`. Other available types include: `convention`, `security`, `performance`, `accessibility`, and `documentation`.
+
+## WORKFLOW & RELEASE RULES
+[Insert Workflow and Release Rules Here]
+
+## REFERENCE EXAMPLES
+[Insert Reference Examples Here]
+- Next.js App Router Best Practices (Japanese):
+```mdc
+- デフォルトではサーバーコンポーネントを使用する
+- 必要な場合のみクライアントコンポーネントを実装する
+- 新しいファイルベースのルーティングシステムを活用する
+- 共有レイアウトにはlayout.jsを使用する
+- ローディング状態にはloading.jsを実装する
+- エラーハンドリングにはerror.jsを使用する
+- APIルートにはルートハンドラーを活用する
+```
+- Next.js App Router Best Practices (English):
+```mdc
+- Use server components by default
+- Implement client components only when necessary
+- Leverage the new file-based routing system
+- Use layout.js for shared layouts
+- Implement loading.js for loading states
+- Use error.js for error handling
+- Utilize route handlers for API routes
+```
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+The project documentation will be maintained using markdown (.md) files.  A review of existing documentation, specifically `README.md` and `.specstory/.what-is-this.md`, is necessary to ensure clarity and completeness of Japanese language support.  Versioning of documentation will be tracked using Git.  Further review is needed for `.cursor/rules/next-js-app-router-best-practices.mdc`
+
+## DEBUGGING
+[Insert Debugging Guidelines Here]
+
+## FINAL DOs AND DON'Ts
+- DO ensure all code adheres to the defined code style.
+- DO utilize the version control system effectively.
+- DO write clear and concise documentation.
+- DON'T commit incomplete or untested code.
+- DON'T neglect to update the `.cursorrules` file with any changes to project standards or workflows.
+- DO ensure that the rule type is specified in cursor rules (Resolved).
