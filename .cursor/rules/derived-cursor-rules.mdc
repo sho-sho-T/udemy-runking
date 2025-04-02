@@ -4,7 +4,8 @@ globs: *
 ---
 
 ## PROJECT OVERVIEW
-This project aims to [Insert Project Goal Here].  The project is currently under development and undergoing internationalization efforts, specifically focusing on improving Japanese language support.  Further review of `.cursor/rules/next-js-app-router-best-practices.mdc` is needed for Japanese language support.  Files identified for translation include `README.md`, `.specstory/.what-is-this.md`, `.devcontainer/Dockerfile`, `.devcontainer/docker-compose.yml`, `.devcontainer/devcontainer.json`, and `.cursor/rules/next-js-app-router-best-practices.mdc`. Other files are considered configuration or system files and are excluded from translation.
+This project aims to [Insert Project Goal Here].  The project is currently under development and undergoing internationalization efforts, specifically focusing on improving Japanese language support.  Further review of `.cursor/rules/next-js-app-router-best-practices.mdc` is needed for Japanese language support.  Files identified for translation include `README.md`, `.specstory/.what-is-this.md`, `.devcontainer/Dockerfile`, `.devcontainer/docker-compose.yml`, `.devcontainer/devcontainer.json`, and `.cursor/rules/next-js-app-router-best-practices.mdc`. Other files are considered configuration or system files and are excluded from translation.  Additional files identified for Japanese language support include those listed in the interaction from 2025-03-30_06-43-日本語修正の依頼.md. The `--force` flag can be used with `npx create-next-app@latest .` to initialize a Next.js project while preserving existing files.  Using the `--force` flag is recommended when existing files are present, but may require additional steps if conflicts persist.  A temporary directory approach or manual `package.json` creation may be necessary for complex scenarios.  If `npx create-next-app@latest . --force` fails, consider alternative approaches like creating a temporary directory for project initialization or manually setting up the project's `package.json` and installing necessary dependencies.
+
 
 ## CODE STYLE
 [Insert Code Style Guidelines Here]
@@ -18,14 +19,13 @@ This project aims to [Insert Project Goal Here].  The project is currently under
 ## PROJECT-SPECIFIC STANDARDS
 - All documentation should be written in clear and concise language.  
 - Japanese language support is being actively developed.
+- This rule enforces Next.js App Router best practices in the 'app' directory.  The rule type can now be specified in cursor rules.  To specify the rule type, add a `type` field to the frontmatter section (surrounded by `---`). Example: `type: best-practices`. Other available types include: `convention`, `security`, `performance`, `accessibility`, and `documentation`.  The `globs` field should also be specified to define the scope of the rule (e.g., `globs: app/**/*`).  Examples of rule types include: `convention`, `security`, `performance`, `accessibility`, and `documentation`.
 
-- This rule enforces Next.js App Router best practices in the 'app' directory.  The rule type can now be specified in cursor rules.  To specify the rule type, add a `type` field to the frontmatter section (surrounded by `---`). Example: `type: best-practices`. Other available types include: `convention`, `security`, `performance`, `accessibility`, and `documentation`.
 
 ## WORKFLOW & RELEASE RULES
-[Insert Workflow and Release Rules Here]
+[Insert Workflow and Release Rules Here]  Using the `--force` flag with `npx create-next-app@latest` is acceptable to initialize a Next.js project while preserving existing files.  However, if errors persist despite using `--force`, consider creating a temporary directory for initialization or manually creating a `package.json` file.  Add `node_modules/` to your `.gitignore` file to prevent large files from being committed to your repository.  If using Git LFS,  remember to track large files appropriately.  If encountering file size limitations during GitHub pushes, ensure that `node_modules/` is added to your `.gitignore` file.
 
 ## REFERENCE EXAMPLES
-[Insert Reference Examples Here]
 - Next.js App Router Best Practices (Japanese):
 ```mdc
 - デフォルトではサーバーコンポーネントを使用する
@@ -48,10 +48,11 @@ This project aims to [Insert Project Goal Here].  The project is currently under
 ```
 
 ## PROJECT DOCUMENTATION & CONTEXT SYSTEM
-The project documentation will be maintained using markdown (.md) files.  A review of existing documentation, specifically `README.md` and `.specstory/.what-is-this.md`, is necessary to ensure clarity and completeness of Japanese language support.  Versioning of documentation will be tracked using Git.  Further review is needed for `.cursor/rules/next-js-app-router-best-practices.mdc`
+The project documentation will be maintained using markdown (.md) files.  A review of existing documentation, specifically `README.md` and `.specstory/.what-is-this.md`, is necessary to ensure clarity and completeness of Japanese language support.  Versioning of documentation will be tracked using Git.  Further review is needed for `.cursor/rules/next-js-app-router-best-practices.mdc`.  All documentation should be reviewed for accuracy and completeness of Japanese language support.  The `.gitignore` file should include `node_modules/` to prevent unnecessary large files from being committed to the repository.
 
 ## DEBUGGING
-[Insert Debugging Guidelines Here]
+[Insert Debugging Guidelines Here]  If `npx create-next-app@latest . --force` fails, consider alternative approaches like creating a temporary directory for project initialization or manually setting up the project's `package.json` and installing necessary dependencies. If encountering file size limitations during GitHub pushes, ensure that `node_modules/` is added to your `.gitignore` file.  A temporary directory approach or manual `package.json` creation may be necessary for complex scenarios.
+
 
 ## FINAL DOs AND DON'Ts
 - DO ensure all code adheres to the defined code style.
@@ -60,3 +61,44 @@ The project documentation will be maintained using markdown (.md) files.  A revi
 - DON'T commit incomplete or untested code.
 - DON'T neglect to update the `.cursorrules` file with any changes to project standards or workflows.
 - DO ensure that the rule type is specified in cursor rules (Resolved).
+- DO specify the `globs` field in cursor rules to define the scope of the rule.
+- DO consider using the `--force` flag with `npx create-next-app@latest` when initializing a Next.js project to preserve existing files.  If this fails, explore alternative methods such as temporary directory creation or manual `package.json` setup.
+- DO add `node_modules/` to your `.gitignore` file.
+- DO add the following to your `.gitignore` file to prevent unnecessary files from being committed to the repository:
+```
+# dependencies
+node_modules/
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+```
